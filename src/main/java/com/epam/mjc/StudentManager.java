@@ -9,12 +9,9 @@ public class StudentManager {
   public Student find(long studentID) {
     try{
       Student s = Student.getValueOf(studentID);
-
       return s;
     } catch(IllegalArgumentException e) {
-      throw  new StudentNotFoundException("Could not find student with ID" +studentID, e);
-    } finally {
-
+      throw  new StudentNotFoundException("Could not find student with ID " +studentID, e);
     }
   }
 
